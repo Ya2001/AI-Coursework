@@ -1,0 +1,66 @@
+Prolog Queries
+
+type(X).
+X = normal
+X = dragon
+X = ghost
+X = fighting
+X = flying
+
+monster(fraxure,X).
+X = dragon
+
+move(X,normal).
+X = strength
+X = takeDown
+X = falseSwipe
+X = facade
+X = teaTime
+X = furyAttack
+X = bodySlam
+
+monsterMove(fraxure,X).
+X = falseSwipe
+X = dragonClaw
+X = outrage
+X = shadowClaw
+
+typeEffectiveness(fighting,X,Y).
+X = dragon,
+Y = ordinary
+X = fighting,
+Y = ordinary
+X = flying,
+Y = weak
+X = ghost,
+Y = superweak
+X = normal,
+Y = strong
+
+moreEffectiveThan(strong,X).
+X = ordinary
+X = weak
+X = superweak
+
+monsterMoveMatch(bewear,X).
+X = strength
+X = takeDown
+
+monsterMoveMatch(X,astonish).
+X = polteageist
+
+moreEffectiveMove(shadowClaw,facade,X).
+X = ghost
+
+moreEffectiveMove(X,facade,ghost).
+X = peck
+X = braveBird
+X = shadowClaw
+X = astonish
+X = shadowBall
+X = dragonClaw
+X = outrage
+
+moreEffectiveMonster(sirfetchd,X,bewear,strength).
+X = brickBreak
+X = closeCombat
